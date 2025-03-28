@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="cart-item-container js-cart-item-delete-${matchingProduct.id}">
+        <div class="delivery-date">
+            Delivery date: Tuesday, June 21
+        </div>
+
+        <div class="cart-item-details-grid">
+            <img class="product-image" src="${matchingProduct.image}">
+
+            <div class="cart-item-details">
+                <div class="product-name">
+                    ${matchingProduct.name}
+                </div>
+                <div class="product-price">
+                    $${formatcurrency(matchingProduct.priceCents)}
+                </div>
+                <div class="product-quantity">
+                    <span>
+                        Quantity: <span class="quantity-label js-quantity-label-${matchingProduct.id}">${item.quantity}
+                        </span>
+                    </span>
+                    <span class="update-quantity-link link-primary js-link-update"
+                        data-product-id="${matchingProduct.id}">
+                        Update
+                    </span>
+                    <input class="quantity-input js-quantiy-input-${matchingProduct.id}">
+                    <span class="save-quantity-link link-primary js-click-save"
+                        data-product-id="${matchingProduct.id}">Save</span>
+                    <span class="delete-quantity-link link-primary js-link-delete"
+                        data-product-id="${matchingProduct.id}">
+                        Delete
+                    </span>
+                </div>
+            </div>
+
+            <div class="delivery-options">
+                <div class="delivery-options-title">
+                    Choose a delivery option:
+                </div>
+                ${deliveryOptionHTML()}
+            </div>
+        </div>
+    </div>
+    `;
+
+
+</body>
+
+</html>
